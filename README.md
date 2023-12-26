@@ -1,4 +1,4 @@
-# NLP Project with Generative AI and Streamlit
+# Fashion-Generative AI
 
 ## Overview
 
