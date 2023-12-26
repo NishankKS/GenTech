@@ -54,7 +54,10 @@ with st.expander("View History"):
             st.write(f"{text}")
         else:
             st.write(f":green[{role}]: ")
-            st.image(img_path)
+            try:
+            	st.image(img_path)
+            except:
+            	pass
             st.write(f"{text}")
         prev = role
     
