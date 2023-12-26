@@ -19,7 +19,7 @@ class ImageGenerationTool():
         response = requests.post(API_URL, headers=headers, json=payload)
 
         g = Image.open(io.BytesIO(response.content))
-        image_path = f'./Assets/response_{globals()["i"]}.png'
+        image_path = f'./response_{globals()["i"]}.png'
         g.save(image_path)
         globals()["i"] += 1
         return image_path
