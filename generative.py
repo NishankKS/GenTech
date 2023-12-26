@@ -5,7 +5,7 @@ import streamlit as st
 import os
 import google.generativeai as genai
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 ## function to load Gemini Pro model and get repsonses
 model=genai.GenerativeModel("gemini-pro") 
@@ -31,7 +31,9 @@ submit=st.button("Send")
 if submit and input:
     img_path = ""
     if '#generate' in input:
-        img_path = ImageGenerationTool().run(input)
+        API_TOKEN = st.secrets['HUGGINGFACE_API_TOKEN']
+        API_URL = st.secrets['HUGGINGFACE_API_URL']
+        img_path = ImageGenerationTool().run(input,API_TOKEN,API_URL)
         input = input.replace("#generate","write a short note on ")
         st.image(img_path, use_column_width=True)
     response=get_gemini_response(input)
@@ -60,3 +62,4 @@ with st.expander("View History"):
 
 
     
+

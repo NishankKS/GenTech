@@ -2,6 +2,7 @@ from langchain.tools import BaseTool
 from PIL import Image
 import io,os,requests
 
+
 i = 1
 class ImageGenerationTool():
     name = "Image generator"
@@ -9,9 +10,7 @@ class ImageGenerationTool():
                   "The tool will create and return the generated image file path." \
                   "Perfect for scenarios where you need custom images tailored to your specifications."
 
-    def run(self, prompt):
-        API_TOKEN = os.getenv('HUGGINGFACE_API_TOKEN')
-        API_URL = os.getenv('HUGGINGFACE_API_URL')
+    def run(self, prompt, API_TOKEN, API_URL):
         headers = {"Authorization": f"Bearer {API_TOKEN}"}
         payload = {
             "inputs": prompt,
@@ -27,4 +26,5 @@ class ImageGenerationTool():
 
     def _arun(self, query: str):
         raise NotImplementedError("This tool does not support async")
+
 
