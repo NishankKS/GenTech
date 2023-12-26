@@ -45,7 +45,7 @@ Before running the application, ensure you have the following installed:
 Run the Streamlit app:
 
 ```bash
-streamlit run app.py
+streamlit run generative.py
 ```
 
 Visit http://localhost:8501 in your browser to interact with the application.
