@@ -17,9 +17,11 @@ def get_gemini_response(question):
 
 ##initialize our streamlit app
 
-st.set_page_config(page_title="NLP Project")
+st.set_page_config(page_title="GenerativeAI - GeminiPro")
 
-st.header("GenerativeAI")
+st.header("Fashion Recommendation ChatBot")
+
+st.write("Include #generate in input to generate an Image")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
@@ -35,6 +37,7 @@ if submit and input:
         API_URL = st.secrets['HUGGINGFACE_API_URL']
         img_path = ImageGenerationTool().run(input,API_TOKEN,API_URL)
         input = input.replace("#generate","write a short note on ")
+        print(img_path)
         st.image(img_path, use_column_width=True)
     response=get_gemini_response(input)
     # Add user query and response to session state chat history
@@ -55,10 +58,9 @@ with st.expander("View History"):
         else:
             st.write(f":green[{role}]: ")
             try:
-                st.write(img_path)
                 st.image(img_path)
-            except:
-                pass
+            except Exception as e:
+                print(e)
             st.write(f"{text}")
         prev = role
     
