@@ -4,6 +4,11 @@
 
 This repository contains a Python application that leverages Generative AI models from Google's GenerativeAI and Hugging Face's API. The application is built with Streamlit and includes functionality for text-based conversations and image generation.
 
+## Deployment
+![image](https://github.com/Manikanta-7342/Fashion-GenAI/assets/92366177/dd8cf0ad-862a-488f-993a-725d835e76d4)
+
+The Streamlit app is deployed at https://fashiongenai.streamlit.app/. Visit the link to experience the live application.
+
 ## Prerequisites
 
 Before running the application, ensure you have the following installed:
@@ -53,5 +58,3 @@ Visit http://localhost:8501 in your browser to interact with the application.
 ## Image Generation
 The application includes an image generation tool. To use it, include #generate in your input, and the tool will create and display the generated image.
 
-## Deployment
-The Streamlit app is deployed at https://fashiongenai.streamlit.app/. Visit the link to experience the live application.
