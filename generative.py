@@ -19,9 +19,9 @@ def get_gemini_response(question):
 
 st.set_page_config(page_title="GenerativeAI - GeminiPro")
 
-st.header("Fashion Recommendation ChatBot")
+st.header("Fashion Recommendation ChatBot :sunglasses:", divider='rainbow')
 
-st.write("Include #generate in input to generate an Image")
+st.text(":red[Note] :- Include #generate in input to generate an Image")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
@@ -49,7 +49,7 @@ if submit and input:
     
 st.subheader("The Chat History is")
 
-with st.expander("View History"):
+with st.expander("View History  :point_down:"):
     for role, text, img_path in st.session_state['chat_history']:
         if role=='You':
             st.write(f":blue[{role}]: {text}")
