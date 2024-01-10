@@ -21,7 +21,7 @@ st.set_page_config(page_title="GenerativeAI - GeminiPro")
 
 st.header("Fashion Recommendation ChatBot :sunglasses:", divider='rainbow')
 
-st.text(":red[Note]  Include #generate in input to generate an Image")
+st.text(":blue[Note]  Include #generate in input to generate an Image")
 
 # Initialize session state for chat history if it doesn't exist
 if 'chat_history' not in st.session_state:
