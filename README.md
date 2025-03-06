@@ -1,14 +1,29 @@
-# Fashion-Generative AI
+# GenTech - Generative AI Based Fashion Recommendation System  
 
-## Overview
+## Overview  
+GenTech is an innovative fashion recommendation system powered by Generative AI. This application leverages advanced Natural Language Processing (NLP) techniques and machine learning models to deliver personalized fashion recommendations to users. The system is built using Python and integrates with cutting-edge AI models from Google's GenerativeAI and Hugging Face's API, providing an engaging and interactive experience for users.  
 
-This repository contains a Python application that leverages Generative AI models from Google's GenerativeAI and Hugging Face's API. The application is built with Streamlit and includes functionality for text-based conversations and image generation.
+GenTech utilizes a chat-based interface that not only recommends fashion items based on user preferences but also offers an image generation feature to visualize recommended styles.  
 
-## Deployment
-![image](https://github.com/Manikanta-7342/Fashion-GenAI/assets/92366177/dd8cf0ad-862a-488f-993a-725d835e76d4)
-
-The Streamlit app is deployed at https://fashiongenai.streamlit.app/. Visit the link to experience the live application.
-
+## Features  
+  
+Text-Based Conversations: Users can interact with the system through natural language, asking for fashion recommendations or style advice.  
+Personalized Style Recommendations: The application provides tailored suggestions based on individual preferences, taking into account factors such as color, fabric, occasion, and more.  
+Image Generation: Users can request images of clothing items or entire outfits by including #generate in their input. The tool generates and displays visual representations of the recommended styles.  
+  
+## Tech Stack
+Python: Main programming language used for backend development.  
+LangChain: Framework for integrating large language models with external tools and APIs.  
+GPT-3.5 Turbo API: OpenAI's language model used to generate personalized recommendations and responses.  
+Streamlit: A powerful library for building interactive web applications with minimal code.  
+Generative AI Models: Integrated through Google's GenerativeAI and Hugging Face's API for generating fashion-related content and visualizations.  
+  
+## How It Works
+User Input: The user types a query or request (e.g., "Show me a stylish outfit for a summer day").  
+Model Interaction: The application processes the query using GPT-3.5 Turbo API to generate a fashion recommendation.  
+Image Generation: If the input includes #generate, the system utilizes the image generation tool to create a visual representation of the recommended fashion item or outfit.  
+Display: The generated recommendation, along with the image (if requested), is shown to the user in a simple and interactive interface built with Streamlit.  
+  
 ## Prerequisites
 
 Before running the application, ensure you have the following installed:
@@ -55,6 +70,4 @@ streamlit run generative.py
 
 Visit http://localhost:8501 in your browser to interact with the application.
 
-## Image Generation
-The application includes an image generation tool. To use it, include #generate in your input, and the tool will create and display the generated image.
 
