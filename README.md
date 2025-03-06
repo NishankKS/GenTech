@@ -23,6 +23,9 @@ User Input: The user types a query or request (e.g., "Show me a stylish outfit f
 Model Interaction: The application processes the query using GPT-3.5 Turbo API to generate a fashion recommendation.  
 Image Generation: If the input includes #generate, the system utilizes the image generation tool to create a visual representation of the recommended fashion item or outfit.  
 Display: The generated recommendation, along with the image (if requested), is shown to the user in a simple and interactive interface built with Streamlit.  
+
+## Demo  
+![295528979-dd8cf0ad-862a-488f-993a-725d835e76d4](https://github.com/user-attachments/assets/86e295e5-07bc-4de3-99f5-e5bb716c59f0)
   
 ## Prerequisites
 
